@@ -206,7 +206,4 @@ function deleteNote(dateTime) {
   localStorage.removeItem("note-" + dateTime);
 }
 
-function goBack() {
-  window.history.back();
-}
 
