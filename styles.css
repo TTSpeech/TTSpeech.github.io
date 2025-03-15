@@ -1,0 +1,207 @@
+/* General Styling */
+body {
+    background: url('img/back.png') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Dark Overlay for Better Readability */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+/* Typography */
+h1 {
+    color: #4CAF50;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+h3 {
+    color: #00bcd4;
+    font-size: 1.5rem;
+}
+
+p {
+    color: #e0f7fa;
+    font-size: 1.1rem;
+}
+
+/* App Styling */
+.app {
+    background: rgba(0, 0, 0, 0.8); /* Dark background for contrast */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+/* Textarea Styling */
+#note-textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #97c9be;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1rem;
+    resize: none;
+}
+
+/* Button Group - Centered */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+/* Circular Icon Buttons */
+.icon-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Icons */
+.icon-btn i {
+    font-size: 22px;
+    color: white;
+}
+
+/* Hover Effect */
+.icon-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+/* Tooltip Styling */
+.icon-btn .tooltip {
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Show Tooltip on Hover */
+.icon-btn:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Notes Styling */
+#notes {
+    list-style: none;
+    padding: 0;
+}
+
+.note {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    border-radius: 8px;
+    margin: 10px 0;
+    text-align: left;
+}
+
+.note .header {
+    font-size: 0.9rem;
+    color: #bbb;
+    margin-bottom: 10px;
+}
+
+.note .delete-note {
+    color: red;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Aligns buttons horizontally in the header */
+.note .header {
+    display: flex;
+    
+    align-items: center;
+  }
+  
+  /* Button container to keep buttons aligned */
+  .note .header .buttons {
+    display: flex;
+    gap: 80px; /* Adds spacing between buttons */
+  }
+  
+  /* Adjust individual buttons */
+  .note .icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 10px;
+    padding: 5px;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .note .icon-btn:hover {
+    color: #793a15; /* Changes color on hover */
+  }
+  
+
+/* Responsive */
+@media (max-width: 600px) {
+    .app {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .button-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+#back-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+#back-btn i {
+    color: #c7c6c6;
+}
+
+#back-btn:hover i {
+    color: #d9d6dc;
+}
+
